@@ -1,0 +1,25 @@
+2- console.log("Cadastro de funcionários:\n1)Cadastrar funcionário\n2)Listar funcionários\n3)Editar funcionários\n4)Deletar funcionários\n5)Sair")
+
+3- let admin
+        let nome 
+        nome = "João"
+        admin = nome
+        console.log(nome)
+
+4-  let nome = "Diego"
+        let idade = 29
+        let peso = "82 kg"
+        let altura = "175cm"
+        let fone = "47 988848888"
+        console.log(`Nome: ${nome}`)
+        console.log(`Idade: ${idade}`)
+        console.log(`Peso: ${peso}`)
+        console.log(`altura: ${altura}`)
+        console.log(`fone: ${fone}`)
+
+6- let dataNascimento, quantidadeDeFilhos, usuarioLogado;
+
+7-  let nome = "joão"
+        console.log(`Ola ${1}`)  //ola 1
+        console.log(`ola ${nome}`)  //ola joão
+        alert(`ola ${nome}`)  // ola joão

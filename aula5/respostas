@@ -1,0 +1,17 @@
+17-    let numero = Number(prompt("Digite um número"))
+       let antecessor = numero -1
+       let sucessor = numero +1
+
+       console.log(antecessor)
+       console.log(sucessor)
+       alert(`O número antecessor é ${antecessor} e o número sucessor é ${sucessor}`)
+
+18-  let raio = Number(prompt("digite um número"))
+      let pi = 3.14159
+      let area = 4 / 3 * pi * raio ** 3
+      console.log(area)
+
+19-  let altura = Number(prompt("digite um valor para altura"))
+     let base = Number(prompt("digite um valor para base"))
+     let area = base * altura / 2
+     console.log(area)
