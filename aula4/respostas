@@ -23,3 +23,48 @@
         console.log(`Ola ${1}`)  //ola 1
         console.log(`ola ${nome}`)  //ola joão
         alert(`ola ${nome}`)  // ola joão
+
+11-  let alturaRetangulo = Number(prompt("Digite a altura do retângulo em cm"))
+   let larguraRetangulo = Number(prompt("digite a largura do retângulo em cm"))
+    let areaRetangulo = alturaRetangulo * larguraRetangulo
+    let perimetroRetangulo = 2 * alturaRetangulo + 2 * larguraRetangulo
+    alert(`Área do retângulo é  ${areaRetangulo}cm\nPerímetro do retãngulo é ${perimetroRetangulo}cm`)
+    console.log(areaRetangulo)
+    console.log(perimetroRetangulo)
+
+12- let numero1 = Number(prompt("Digite um número"))
+  let numero2 = Number(prompt("Digite um número"))  
+  let soma = numero1 + numero2
+  alert(`A soma dos dois números é de ${soma}`)
+  console.log(numero1)
+  console.log(numero2)
+  console.log(soma)    
+
+13- let nota1 = Number(prompt("Digite a primeira nota"))
+  let nota2 = Number(prompt("Digite a segunda nota"))
+  let mediaDasNotas = (nota1 + nota2) / 2
+  alert(`A media das notas é ${mediaDasNotas}`)
+  console.log(nota1)
+  console.log(nota2)
+  console.log(mediaDasNotas)
+
+14- let n1 = Number(prompt("Digite um número"))
+  let n2 = Number(prompt("Digite um número"))
+  let n3 = Number(prompt("Digite um número"))      
+  let quadrado1 = n1 ** 2 
+  let quadrado2 = n2 ** 2
+  let quadrado3 = n3 ** 2
+  alert(`O quadrado do primeiro número é ${quadrado1} \n O quadrado do segundo número é ${quadrado2} \n O quadrado do terceiro número é${quadrado3}`)
+
+15 -  let A = 10
+ let B = 20
+ let C = A
+ A = B
+ B = C
+ console.log(A,B)
+
+16- let meses = Number(prompt("Digite o números de meses desejado"))
+let totalDeDias = meses * 30
+alert(`O total de dia é de ${totalDeDias}`)
+console.log(meses)
+console.log(totalDeDias) 
