@@ -1,0 +1,124 @@
+3-  let valorA = Number(prompt("Digite um número:"))
+        if (valorA>10) {
+            console.log("O valor de A é maior que 10")
+        } else {
+            console.log("O valor é menor que 10")
+        }
+        console.log("Programa finalizado...")
+
+
+4-let numero1 = Number(prompt("Digite um número"))
+            if (numero1 % 2 == 0){
+                console.log(numero1 / 2)
+            } else {
+                console.log("Numero ímpar")
+            }
+            console.log("Programa finalizado...")
+
+
+5- let numero = Number(prompt("Digite um número"))
+            if (numero % 2 == 0){
+                console.log("Número par")
+            } else {
+                console.log("Número ìmpar")
+            } console.log("Programa finalizado...")
+
+
+6-   let numero = Number(prompt("Digite um número"))
+      if (numero > 20 && numero < 90){
+          console.log("O número está entre 20 e 90")
+      } else {
+          console.log("O número está fora da faixa")
+      }
+      console.log("Programa finalizado...")
+
+
+8-     let numeroA = Number(prompt("Digite um número"))
+    let numeroB = Number(prompt("Digite um número"))
+    let numeroC = Number(prompt("Digite um número"))
+     if (numeroA > numeroB && numeroA > numeroC){
+         console.log(`O número ${numeroA} é o maior entre os três`)
+     } else if (numeroB > numeroA && numeroB > numeroC){
+         console.log(`O número ${numeroB} é o maior entre os três`)
+     } else {
+         console.log(`O número ${numeroC} é o maior entre os três`)
+     }
+     console.log("Programa finalizado...")
+
+
+
+10-  let ladoA = Number(prompt("Digite um lado do triângulo"))
+        let ladoB = Number(prompt("Digite um lado do triângulo"))
+        let ladoC = Number(prompt("Digite um lado do triângulo"))
+         if (ladoA == ladoB && ladoB == ladoC) {
+         console.log("O triângulo é equilátero") 
+          } else if (ladoA != ladoB && ladoA != ladoC && ladoB != ladoC) {
+         console.log("O triângulo é escaleno")
+         } else  {
+         console.log("O triângulo é isósceles")
+         }
+
+
+11- let numeroA = Number(prompt("Digite um numero"))
+        if (numeroA > 0) {
+            let raiz = Math.sqrt(numeroA)
+            console.log(`A raiz quadrada de ${numeroA} é de ${raiz.toFixed(2)}`)
+        } else {
+            console.log("Número inválido")
+        }
+
+
+
+12- let numero = Number(prompt("Digite um número"))
+       if (numero % 5 == 0) {
+           console.log("Número divisível por 5")
+       } else {
+           console.log("Número não divisível por 5")
+       }
+
+
+
+13 - let numero = Number(prompt("Digite um número"))
+        if (numero > 0) {
+            let raiz = Math.sqrt(numero)
+            console.log(`A raiz quadrada de ${numero} é de ${raiz.toFixed(2)}`)
+        } else {
+            let quadrado = (numero ** 2)
+            console.log(`O quadrado de ${numero} é de ${quadrado}`)
+        }
+
+
+
+14- let salario = Number(prompt("Digite o sálario"))
+       let prestacao = Number(prompt("Digite o valor da prestação"))
+        if (prestacao > salario / 100 * 20) {
+            console.log("Empréstimo não concedido")
+        } else {
+            console.log("Empréstimo concedido")
+        }
+
+
+
+15-  let timeA = Number(prompt("Informe a quantidade de gols do time A"))
+      let timeB = Number(prompt("Informe a quantidade de gols do time B"))
+       if (timeA == timeB) {
+           console.log("Empate")
+       } else if (timeA > timeB) {
+           console.log("Vitória do time A")
+       } else {
+           console.log("Vitória do time B")
+       }
+
+
+
+16-  let idade = Number(prompt("Digite sua idade"))
+       if (idade < 16) {
+           console.log("Não precisa votar")
+       } else if (idade >= 18 && idade <= 65) {
+           console.log("Voto obrigatório")
+       } else {
+           console.log("Voto opcional")
+       }
+
+
+17 - 
