@@ -121,4 +121,52 @@
        }
 
 
-17 - 
+17 -   let n1 = Number(prompt("digite um número"))
+     let n2 = Number(prompt("digite um número"))
+     let n3 = Number(prompt("digite um número"))
+      if (n1 > n2 && n1 > n3) {
+          if (n2 > n3)
+          console.log(`${n1} , ${n2} , ${n3}`)
+          } else if (n3 > n2) {
+          console.log(`${n1} , ${n3} , ${n2}`) 
+      } else if (n2 > n1 && n2 > n3 && n1> n3) {
+          console.log(`${n2} , ${n1} , ${n3}`)
+      } else {
+          console.log(`${n3} , ${n2} , ${n3}`)
+      }
+
+
+18-  let idade = Number(prompt("Digite sua idade"))
+    if (idade < 18 || idade > 67 ) {
+       console.log("não pode doar sangue")
+   } else {
+       console.log("Pode doar sangue")
+   }
+
+
+19 - let dia = Number(prompt("Digite um número de 1 a 7"))
+  switch(dia) {
+      case 1 :
+        console.log("Domingo")
+        break
+      case 2 :
+        console.log("Segunda-feira")
+        break
+      case 3 :
+        console.log("terça-feira")  
+        break
+      case 4 :
+        console.log("Quarta-feira")  
+        break
+      case 5 : 
+        console.log("Quinta-feira")
+        break
+      case 6 : 
+        console.log("Sexta-feira")
+        break
+      case 7 : 
+        console.log("Sábado")
+        break
+      default : 
+        console.log("Número inválido") 
+  }
