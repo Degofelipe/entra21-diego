@@ -7,6 +7,39 @@
 </head>
 <body>
     <script>
+/*A prefeitura de uma cidade fez uma pesquisa entre seus habitantes, coletando dados
+ sobre o salário e número de filhos. A prefeitura deseja saber:
+a) média do salário da população
+b) média do número de filhos
+c) maior salário
+Crie um script que leia as informações necessários do usuário enquanto o salário digitado 
+não for negativo. Após isso informe as informações solicitadas.*/
+{
+	let acumuladorSalario = 0
+	let acumuladorFilhos = 0
+	let maiorSalario = 0
+	let contador = 0
+	while(true) {
+		let salario = +prompt("Digite seu salário")
+		if (salario < 0) {
+			break
+		}
+		if (salario > maiorSalario) {
+			maiorSalario = salario
+		}
+		let filhos = +prompt("Digite a quantidades de filhos")
+
+		acumuladorSalario += salario
+		acumuladorFilhos += filhos
+		contador ++
+	}
+	let mediaSalario = acumuladorSalario / contador
+	let mediaFilhos = acumuladorSalario / contador
+
+	console.log(`Média salarial: ${mediaSalario.toFixed(2)}`)
+	console.log(`Média de filhos: ${mediaFilhos.toFixed(2)}`)
+	console.log(`Maior salário: ${maiorSalario}`)
+}
  </script>
 </body>
 </html>
