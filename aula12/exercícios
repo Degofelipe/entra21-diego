@@ -1,0 +1,9 @@
+1-{
+  let vetor = [],
+    pares = 0
+  for (let i = 0 ; 1 < 10 ; i++) {
+    vetor [i] = +prompt(`Digite o ${i + 1}° valor`)
+   
+    if (vetor[i] % 2 === 0) pares++
+  }  
+}

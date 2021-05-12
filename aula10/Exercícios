@@ -1,0 +1,176 @@
+1-{
+    let i = 0
+    while ( i < 10 ) {
+        console.log("Olá mundo") 
+            i++
+    }
+}  
+
+{
+    let i = 0
+    do {
+        console.log("olá mundo")
+        i++ }
+        while (i < 10)
+}
+
+{
+    for (let i = 0 ; i < 10 ; i++) {
+        console.log("Olá mundo")}
+}
+
+
+2-{
+    let contador = 1
+    while (contador < 11) {
+        console.log(`Estou aparecendo pela ${contador} na tela`)
+        contador++
+    }
+}
+
+{
+    contador = 1
+    do {
+        console.log(`Estou aparecendo pela ${contador} na tela`)
+        contador++
+    } while (contador<11)
+}
+
+{
+    for (let contador = 1; contador<11 ; contador++) {
+        console.log(`Estou aparecendo pela ${contador} na tela`)
+    }
+}
+
+
+3-{
+    let i = 10
+    while (i >= 0) {
+        console.log(i)
+        i--
+    } console.log("fim")
+
+}
+
+{
+    for (let i = 10 ; i >= 0 ; i--){
+    console.log(i)
+    } console.log("fim")
+}
+
+4- {
+    for (let i = 0 ; i < 3 ; i++) {
+    let n1 = +prompt("Digite um número")
+    let n2 = +prompt("Digite um número")
+
+    let subtraçao = n1 - n2
+    console.log(`${n1} - ${n2} = ${subtraçao}`)
+    }
+}
+
+5- {
+    for (let i = 0 ; i <= 100000 ; i += 1000){
+    console.log(i)
+    }
+}
+
+
+6-{
+    let soma = 0
+    for (let i = 0 ; i < 5 ; i++ ) {
+        let numero = +prompt("Digite um número")
+        soma += numero
+    } let media = soma / 5
+        console.log(media.toFixed(2))
+}
+
+7-{
+    let impares = ""
+    let numero = prompt("Digite um número")
+    for (let i = 1 ; i <= numero ; i++) {
+        if (i % 2 == 1)
+        impares = i
+        console.log(impares)
+    }
+}
+
+
+8-{
+  let numero = +prompt("Digite um número")
+    for (let i = 1 ; i <= 15 ; i++ ){
+    let tabuada = numero * i
+     console.log(`${numero} x ${i} = ${tabuada}`)}
+}
+
+9-{
+  let contadorNegativos = 0
+  for (i = 0; i < 5; i++){
+    let valor = +prompt(`Digite o ${i + 1}° número`)
+      if (valor < 0) {
+      contadorNegativos++}  
+  } console.log(`Negativos: ${contadorNegativos}`)
+}
+
+10-{
+  let pares = 0
+  let impares = 0
+      for(i = 0; i < 10; i++) {
+        let valor = +prompt(`Digite o ${i + 1}° número`)
+          if (valor % 2 ===0) {
+            pares++}
+          else {
+            impares++}
+      } console.log(`Pares: ${pares}\n Impares: ${impares}`)
+}
+
+11-{
+    let intervalo = 0
+    let foraDoIntervalo = 0
+    while (true) {
+      let valor = +prompt("Digite um número")
+      if (valor <0){
+        break}
+      else if (valor >= 10 && valor <= 20) {  
+      intervalo++ }
+      else {
+        foraDoIntervalo++ }
+    } console.log(`Números que estão entre 10 e 20: ${intervalo} \nNúmeros que estão fora do intervalo: ${foraDoIntervalo}`)
+
+}
+
+12- {
+  	let acumulador = 0,
+		contadora = 0
+	while (true) {
+		let valores = +prompt("Digite um número")
+		if (valores < 0) {
+			break
+		}
+		acumulador += valores
+
+		contadora++
+	} 
+	let media = acumulador / contadora
+	console.log(media)
+}
+
+13- {
+	let multiplos7 = " "
+	let soma = 0
+	for(i = 0; i<15; i++){
+	soma +=7
+	multiplos7 += soma + " "
+	}
+	console.log(multiplos7)
+}
+
+14 - {
+	let numero = Number(prompt("Digite um número para fatoração"))
+	let fatoracao = numero
+	for(let i = numero - 1 ; i > 0 ; i-- ) {
+		fatoracao *= i
+	}
+	console.log(fatoracao)
+}
+
+15
