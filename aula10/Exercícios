@@ -173,4 +173,83 @@
 	console.log(fatoracao)
 }
 
-15
+15- {
+	let acumuladorSalario = 0
+	let acumuladorFilhos = 0
+	let maiorSalario = 0
+	let contador = 0
+	while(true) {
+		let salario = +prompt("Digite seu salário")
+		if (salario < 0) {
+			break
+		}
+		if (salario > maiorSalario) {
+			maiorSalario = salario
+		}
+		let filhos = +prompt("Digite a quantidades de filhos")
+
+		acumuladorSalario += salario
+		acumuladorFilhos += filhos
+		contador ++
+	}
+	let mediaSalario = acumuladorSalario / contador
+	let mediaFilhos = acumuladorFilhos / contador
+
+	console.log(`Média salarial: ${mediaSalario.toFixed(2)}`)
+	console.log(`Média de filhos: ${mediaFilhos.toFixed(2)}`)
+	console.log(`Maior salário: ${maiorSalario}`)
+}
+
+
+16 - {
+	let maior
+	let menor
+	for(let i = 0 ; i < 5 ; i++) {
+		let valor = +prompt("Digite um número")
+		if (i == 0) {
+			maior = valor
+			menor = valor
+		}		
+		if (valor > maior) {
+			maior = valor}
+		else if (valor < menor) {
+			menor = valor}
+	}
+	console.log(`Valor maior é ${maior} e o valor menor é ${menor}`)
+}
+
+
+17- {
+	let acumuladorJose = 0
+	let acumuladorMaria = 0
+	let acumuladorJoao = 0
+	let acumuladorNulo = 0
+	let acumuladorBranco = 0
+
+	while(true) {
+		let voto = +prompt("Em quem você vota? \n 1- José \n 2- Maria \n 3- João \n 4- Nulo \n 5- Branco")
+		if (voto === 0) {
+			break}
+			switch (voto) {
+				case 1 :
+					acumuladorJose++
+					break
+				case 2 :	
+					acumuladorMaria++
+					break
+				case 3 :
+					acumuladorJoao++
+					break
+				case 4  :		
+					acumuladorNulo++
+					break
+				case 5 :
+					acumuladorBranco++
+					break
+				default:
+				console.log("Número inválido")	
+			}
+		}
+	
+	console.log(`Total de votos! \n José: ${acumuladorJose} \n Maria: ${acumuladorMaria} \n João: ${acumuladorJoao} \n Nulo: ${acumuladorNulo} \n Brancos: ${acumuladorBranco}`)
+}
