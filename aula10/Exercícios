@@ -253,3 +253,93 @@
 	
 	console.log(`Total de votos! \n José: ${acumuladorJose} \n Maria: ${acumuladorMaria} \n João: ${acumuladorJoao} \n Nulo: ${acumuladorNulo} \n Brancos: ${acumuladorBranco}`)
 }
+18 - {
+    for(let i = 0 ; i < 4 ; i++) {
+        let media = +prompt("Digite a media")
+        if (media < 0 && media > 10) {
+        console.log("Media inválida")
+         } else if (media >= 0 && media <= 4.9){
+        console.log(`Media ${media} = D`)
+        } else if (media > 4.9 && media <= 6.9) {
+        console.log(`Media ${media} = C`)
+        } else if(media > 6.9 && media <= 8.9) {
+        console.log(`Media ${media} = B`)
+        } else {
+        console.log(`Media ${media} = A`)
+        }
+    }    
+}
+
+19- {
+    while(true){
+        let matricula = Number(prompt("Digite o número da matrícula")) 
+            if(matricula === 0 ){
+            break
+            }
+        let nota1 = +prompt("Digite a primeira nota")
+        let nota2 = +prompt("Digite a segunda nota")
+        let nota3 = +prompt("digite a terceira nota")
+
+        let media = (nota1 + nota2 + nota3) /3
+
+        console.log(`A media da nota da matrícula ${matricula} é ${media.toFixed(2)}`) 
+    }
+}
+
+20 - {
+    let menorNumero = +prompt("Digite o menor número")
+    let maiorNumero = +prompt("Digite o maior nùmero")
+    let somaPares = 0
+    let multiplicaçaoImpares = 1
+
+    for(let i = menorNumero ; i < maiorNumero ; i++) {
+        i % 2 == 0 ? somaPares += i : multiplicaçaoImpares *= i
+    } console.log(`A soma dos números pares é ${somaPares}\n A multiplicação dos números ímpares é ${multiplicaçaoImpares}`)
+}
+
+21- {
+    numerosPrimos :
+    for (let i = 2 ; i < 20 ; i++) {
+        for (let j = 2; j < i ; j++) {
+            if (i % j == 0) { continue numerosPrimos
+            }
+        } 
+    console.log(i)
+    }
+}
+
+
+
+Desafio:
+
+1 - {
+    let base = +prompt("Digite um número para base")
+    let expoente = +prompt("Digite um número para expoente")
+    let potencia = base 
+    for (let i =1; i < expoente; i++) {
+        potencia *= base // altera a variavel potencia, multiplicando pela base
+    }
+    console.log(potencia)
+    
+
+}
+
+3 - {
+   let contadorIntervalo1 = 0
+   let contadorIntervalo2 = 0
+   let contadorIntervalo3 = 0
+   let contadorFora = 0
+    while(true) {
+        let numero = +prompt("Digite um número")
+        if (numero < 0) {
+            break}
+        if (numero > 0 && numero < 25) {
+            contadorIntervalo1++}
+        if (numero > 26 && numero < 50) {
+            contadorIntervalo2++}
+        if (numero > 51 && numero < 75) {
+            contadorIntervalo3++}
+        else {
+            contadorFora++}
+    } console.log(`Intervalo 1 tem ${contadorIntervalo1} \n Intervalo 2 tem ${contadorIntervalo2} \n Intervalo 3 tem ${contadorIntervalo3} \n Fora do intervalo tem ${contadorFora}` )
+}
