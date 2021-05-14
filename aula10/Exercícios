@@ -343,3 +343,13 @@ Desafio:
             contadorFora++}
     } console.log(`Intervalo 1 tem ${contadorIntervalo1} \n Intervalo 2 tem ${contadorIntervalo2} \n Intervalo 3 tem ${contadorIntervalo3} \n Fora do intervalo tem ${contadorFora}` )
 }
+
+4- {
+        let numero = +prompt("Digite um número")
+        let resultado = ""
+        while (numero > 0) {
+            resultado += numero % 10
+            numero = Math.floor(numero / 10)
+        } 
+        console.log(resultado)
+    }  
