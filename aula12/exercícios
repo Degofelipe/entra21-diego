@@ -11,4 +11,42 @@
 
 }
 
-2 
+2 {
+    let vetor = [],
+        maior ,
+        posicao = 0
+       
+        for(let i = 0 ; i < 5 ; i++) {
+            vetor[i] = +prompt(`digite o ${i + 1}° número`)
+            if (i === 0) {
+            maior = vetor[i]
+            
+            }    
+            else if (vetor[i] > maior) {
+            maior = vetor[i]
+            posiçao = i
+            }
+        }
+    console.log(`Vetores: ${vetor}\n O maior vetor : ${maior} \n Posição do vetor : ${posiçao}`)    
+}
+
+3 {
+     let vetor = [],
+         maior,
+         menor
+
+        for(let i = 0 ; i < 5 ; i++) {
+            vetor[i] = +prompt(`Digite o ${i + 1}º valor`) 
+
+            if (i === 0) {
+                maior = vetor[i]
+                menor = vetor[i]
+            } else if (vetor[i] > maior) {
+                maior = vetor[i]
+            } else if (vetor[i] < menor) {
+                menor = vetor[i]
+            }
+        }
+    console.log(`Vetores : ${vetor}\nMaior vetor: ${maior}\nMenor vetor: ${menor}`)
+
+ }
