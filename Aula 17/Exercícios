@@ -1,0 +1,80 @@
+1 /*Faça uma função que recebe um valor inteiro e verifica se o valor é positivo ou negativo. 
+A função deve retornar um valor booleano. Receba um valor do usuário e mostre o resultado
+da função.*/
+
+{
+    function positivo(numero) {
+        return numero > 0
+    }
+    let numero = +prompt("Digite um número")
+    console.log(positivo(numero))
+}
+
+
+2 /*Crie uma função minimo(a, b) que retorna o menor valor entre dois números a e b.
+Receba os dois valores do usuário e mostre o resultado da função.*/
+{
+    function minimo(numeroA, numeroB){
+        if (numeroA > numeroB){
+            return numeroA
+        }
+         return numeroB
+    }
+    let numeroA = +prompt("Digite o primeiro número")
+    let numeroB = +prompt("Digite o segundo número")
+    console.log(minimo(numeroA, numeroB))
+}
+
+
+3 /*Crie uma função potencia(a, b) que retorna a elevado a b. Receba um valor do usuário e 
+mostre o resultado da função.*/
+{
+    function potencia(nA, nB){
+        return nA ** nB
+    }
+    let nA = +prompt("Digite o primeiro número")
+    let nB = +prompt("Digite o segundo número")
+    console.log(potencia(nA, nB))
+}
+
+
+
+4  /*Crie uma script que receba o valor de 3 notas, utilize uma função para calcular a média e
+mostre ela na tela.*/
+{
+   function mediaNotas() {
+     return (nota1 + nota2 + nota3) / 3
+   }
+   let nota1 = +prompt("Digite a primeira nota")
+   let nota2 = +prompt("Digite a segunta nota")
+   let nota3 = +prompt("Digite a terceir nota")
+
+   console.log(mediaNotas().toFixed(2))
+}
+
+5 /*Faça um script que receba a média de um aluno e com a ajuda de uma função que recebe 
+a média por parâmetro retorne o conceito da média conforme a tabela abaixo:
++----------------+-----------+
+|     Média      |  Conceito |
++----------------+-----------+
+| de 0.0 à 4.9   |     D     |
+| de 5.0 à 6.9   |     C     |
+| de 7.0 à 8.9   |     B     |
+| de 9.0 à 10.0  |     A     |*/
+{
+    function mediaAluno (media) {
+        if (media < 5.0) {
+            return "D"
+        } else if (media < 7) {
+            return "C"
+        } else if (media < 9) {
+            return "B"
+        } 
+            return "A"   
+    }    
+    let media = +prompt("Digite a sua media")
+    console.log(mediaAluno(media))
+}
+
+
+6 
