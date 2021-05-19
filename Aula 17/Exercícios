@@ -77,4 +77,44 @@ a média por parâmetro retorne o conceito da média conforme a tabela abaixo:
 }
 
 
-6 
+6 /*Faça uma função que recebe, por parâmetro, a altura e o sexo de uma pessoa e 
+retorna o seu peso ideal. Receba a altura e o sexo do usuário e mostre o resultado da função.
+Utilize as fórmulas:
+Mulher: 62.1 x altura - 44.7
+Homem: 72.7 x altura - 58*/
+{
+    function pesoIdeal() {
+        if (sexo == 1) {
+           return  (72.7 * altura) - 58 
+        } else if (sexo == F) {
+           return  (62.1 * altura) - 44.7
+        }
+    }
+    let sexo = prompt("Digite seu sexo\n 1 - Masculino\n 2 - Feminino")
+    let altura = +prompt("Digite sua altura")
+    console.log(pesoIdeal())
+}
+
+
+7  
+{
+   
+}
+
+
+8 /*Faça uma função que recebe a idade de uma pessoa em anos (365 dias),
+        meses e dias e retorna essa idade expressa em dias.*/
+        {
+            let anos = +prompt("Digite quantos anos você")
+            let meses = +prompt("Digite os meses")
+            let dias = +prompt("digite os dias")
+
+            function totalDias(dias) {
+            return (anos * 365) + (meses * 30) + dias
+            }
+            console.log(totalDias(dias))
+        }
+
+
+
+9
