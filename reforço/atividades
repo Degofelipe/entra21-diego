@@ -1,0 +1,106 @@
+1  {
+    let meses = +prompt("Digite a quantidade de meses")
+    let dias = meses * 30
+    console.log(`A quantidades é de ${dias} dias`)
+    alert(`A quantidades é de ${dias} dias`)
+ }
+
+
+
+ 2{
+    let preço = +prompt("Digite a preço do produto")
+    let desconto = +prompt("Digite o desconto do produto")
+    let valorFinal = preço - (preço / 100 * desconto).toFixed(2) 
+    alert(`O valor do produto com o desconte de ${desconto}% é de ${valorFinal}reais`)
+    console.log(valorFinal)
+}
+
+
+ /* Escreva um script que receba um número, se esse número for par mostre na tela
+               "O número é par" senão mostre "O número é ímpar".*/
+{
+    let numero = +prompt("Digite um número")
+        if(numero % 2 ===0) {
+            console.log("Número par")
+        }else {
+            console.log("Número é impar")
+        }
+}
+
+
+ Leia o salario de um trabalhador e o valor da prestação de um empréstimo. Se a prestaçao
+            for maior que 20% do salário imprima: “empréstimo não concedido”, caso contrario imprima:
+            “empréstimo concedido”.
+
+{
+    let salario = +prompt("Digite seu salário")
+    let parcela = +prompt("Digite o valor da parcela")
+    let valor = (salario / 100) * 20
+        if(parcela > valor){
+            console.log("Emprestimo não concedido")
+        }else {
+            console.log("Empréstimmo concedido")
+        }
+}
+
+Escreva	um programa que	leia as	medidas	dos	lados de um	triângulo, verifique 
+            se ele é Equilátero, Isósceles ou Escaleno.	
+            Sendo que:	
+                − Triângulo	Equilátero:	possui os 3 lados iguais.	
+                − Triângulo	Isósceles: possui 2	lados iguais.	
+                − Triângulo	Escaleno: possui 3 lados diferentes.
+
+let ladoA = Number(prompt("Digite um lado do triângulo"))
+        let ladoB = Number(prompt("Digite um lado do triângulo"))
+        let ladoC = Number(prompt("Digite um lado do triângulo"))
+         if (ladoA == ladoB && ladoB == ladoC) {
+         console.log("O triângulo é equilátero") 
+          } else if (ladoA != ladoB && ladoA != ladoC && ladoB != ladoC) {
+         console.log("O triângulo é escaleno")
+         } else  {
+         console.log("O triângulo é isósceles")
+         }
+
+
+Faça um programa que peça ao usuario para digitar 5 valores. Ao final, mostre a soma desses
+            valores e média desses valores (arredondado para duas casas decimais).*/
+{
+    let soma = 0,
+        contador = 0
+        
+    for(let i = 0; i < 5; i++){
+        let numero = +prompt(`Digite o ${i + 1}º número`)
+        soma += numero
+        contador++
+    }
+    let media = soma / contador
+    console.log(`A soma dos número é : ${soma}`)
+    console.log(`A média é : ${media.toFixed(2)}`)
+}
+
+
+/*Faça um script que receba valores inteiros e mostre na tela quantos desses valores recebidos estão no intervalo
+            [10, 20] e quantos não estão. O programa irá parar de pedir números quando o usuário digitar um número negativo.*/
+{
+    let intervalo = 0
+    let foraIntervalo = 0
+
+    while(true){
+        let numero = +prompt("digite um número")
+        if(numero < 0){
+            break
+        }
+        else if (numero >= 10 && numero <= 20){
+            intervalo++
+        }else {
+            foraIntervalo++
+        }
+    }
+    console.log(`Dentro do intervalo ${intervalo}\nFora do intervalo ${foraIntervalo}`)
+
+    
+}
+
+
+
+
