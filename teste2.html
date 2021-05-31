@@ -23,16 +23,6 @@
         Construir uma função que some todas as propriedades númericas do objeto.
         E as mostre na tela.*/
 {
-    
-    function somaPropriedades(objeto) {
-        let soma = 0
-        for (chave in objeto) {
-            if (typeof chave === "number"){
-                soma += chave
-            }
-        }
-        alert(soma) 
-    }
     let objeto = {
             p1: 20,
             p2: 50,
@@ -42,6 +32,19 @@
             p6: "string",
             p7: 10 
         }
+
+    function somaPropriedades(objeto) {
+        let soma = 0
+        for (let chave in objeto) {
+            if (typeof objeto[chave] === "number"){
+                soma += objeto[chave]
+            }
+        }
+        alert(soma) 
+    }
+    
+    
+    somaPropriedades(objeto)
 }
         
     </script>
