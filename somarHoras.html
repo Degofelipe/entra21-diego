@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        { 
+            let horas = []
+
+            function somarHoras() {
+                let soma = 0
+                for (let i = 0; i < 31; i++) {
+                    horas[i] = +prompt(`Digite a quantidade de horas do dia ${i + 1}`) 
+                    soma += horas[i]
+                }    
+                alert(soma)
+            }
+            console.log(horas)
+
+            somarHoras()
+        }
+
+
+    </script>
+</body>
+
+</html>
