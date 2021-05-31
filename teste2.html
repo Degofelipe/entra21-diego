@@ -9,7 +9,41 @@
 
 <body>
     <script>
-  
+/*2) Dado o objeto:
+        let objeto = {
+            p1: 20,
+            p2: 50,
+            p3: 85,
+            p4: "Olá",
+            p5: "Teste"
+            p6: "string",
+            p7: 10 
+        }
+
+        Construir uma função que some todas as propriedades númericas do objeto.
+        E as mostre na tela.*/
+{
+    
+    function somaPropriedades(objeto) {
+        let soma = 0
+        for (chave in objeto) {
+            if (typeof chave === "number"){
+                soma += chave
+            }
+        }
+        alert(soma) 
+    }
+    let objeto = {
+            p1: 20,
+            p2: 50,
+            p3: 85,
+            p4: "Olá",
+            p5: "Teste",
+            p6: "string",
+            p7: 10 
+        }
+}
+        
     </script>
 </body>
 

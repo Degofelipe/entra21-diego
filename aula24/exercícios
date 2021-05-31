@@ -1,0 +1,18 @@
+/*
+         Escreva a função estaVazio(objeto) que retorna true se o objeto não possuir 
+              propriedades, falso em caso contrário.*/
+
+        {
+            let objeto = {
+                nome: "Diego"
+            }
+
+            function estaVazio(objeto) {
+                for (chave in objeto) return false;
+
+                return true
+            }
+            console.log(estaVazio(objeto))
+        }
+
+
