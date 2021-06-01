@@ -11,16 +11,22 @@
 <body>
     <script>
         { 
-            let horas = []
+            let horas = {}
 
             function somarHoras() {
                 let soma = 0
-                for (let i = 0; i < 31; i++) {
-                    horas[i] = +prompt(`Digite a quantidade de horas do dia ${i + 1}`) 
-                    soma += horas[i]
+                for (let i = 1; i < 32; i++) {
+                    horas[i] = prompt(`Digite a quantidade de horas do dia ${i}`) 
                 }    
+                for (let chave in horas) {   
+                    if (isFinite(horas[chave])) {
+                        soma += +horas[chave]
+                        }
+                    }  
                 alert(soma)
+                console.log(soma)
             }
+            
             console.log(horas)
 
             somarHoras()
