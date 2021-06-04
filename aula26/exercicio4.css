@@ -1,0 +1,20 @@
+table, th, td {
+    border-style: ridge;
+}
+thead{
+    font-size: 25px;
+    background-color: #1dfe9f;
+}
+.nacionais{
+    background-color: #08807f;
+}
+.titulo{
+    text-align: center;
+    background-color: #c0c0c0;
+} 
+.valor{
+    text-align: right; 
+}
+.tempo{
+    text-align: center;
+}

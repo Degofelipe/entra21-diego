@@ -1,0 +1,19 @@
+body{
+    text-align: center;
+}
+th, td{
+    border-bottom: 1px solid #ddd;
+    border-right-width: 0;
+    border-left-width: 0;
+}
+thead{
+    background-color:  #098575;
+    color: blanchedalmond;
+    
+}
+.linha2{
+    background-color:  #94c3bd;
+}
+.dados{
+    background-color: #c7ded9;
+}
