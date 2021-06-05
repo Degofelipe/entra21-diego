@@ -10,28 +10,53 @@
 
 <body>
     <script>
-        { 
+        {
             let horas = {}
 
-            function somarHoras() {
-                let soma = 0
-                for (let i = 1; i < 32; i++) {
-                    horas[i] = prompt(`Digite a quantidade de horas do dia ${i}`) 
-                }    
-                for (let chave in horas) {   
-                    if (isFinite(horas[chave])) {
-                        soma += +horas[chave]
-                        }
-                    }  
-                alert(soma)
-                console.log(soma)
+            let opcoes = "1) Cadastrar horas \n2) Ver horas \n3)Ver total de horas \n0) Sair"
+
+            lacoPrincipal:
+            while (true) {
+                switch (+ prompt("Aperte F12 \nEscolha uma opção: \n" + opcoes)) {
+                    case 0:
+                        break lacoPrincipal;
+                    case 1:
+                        somarHoras()
+                        break
+                    case 2:
+                        console.table(horas)
+                        break
+                    case 3:
+                        soma(horas)
+                        break
+                }
             }
-            
-            console.log(horas)
 
-            somarHoras()
-        }
 
+            function somarHoras() { 
+                
+                for (let i = 1; i < 32; i++) {
+                    horas[i] = prompt(`Digite a quantidade de horas do dia ${i}`)
+                } 
+            }
+            function soma(horas) {
+            let soma = 0       
+                for (let chave in horas) {
+                        if (isFinite(horas[chave])) {
+                            soma += +horas[chave]
+                        }
+                    }
+                   
+            alert(soma)
+            console.log(soma)
+            }
+        }  
+
+        
+
+           
+               
+        
 
     </script>
 </body>
