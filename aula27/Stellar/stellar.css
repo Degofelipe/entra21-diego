@@ -1,0 +1,51 @@
+body{
+    background-image: url(images/overlay.png), -webkit-linear-gradient(
+45deg
+, #e37682 15%, #5f4d93 85%);
+text-align: center;
+}
+header{
+    padding: 5em 5em 1em 5em;
+}
+.logo{
+    transition-delay: 0s;
+    display: block;
+    margin: 0 0 1.5em 0;
+}
+.titulo{
+    font-size: 60px;
+    color: white;
+    margin: 0px 0px 15px;
+}
+.paragrafo1{
+    font-size: 23px;
+    color: #ffffffA6
+    ;
+}
+.paragrafo1__{
+    font-size: 23px;
+    color: #ffffffA6
+}
+nav{
+    display: block;
+    color: #636363;
+    width: 64em;
+    max-width: calc(100% - 4em);
+    padding: 1em;
+    background-color: #f7f7f7;
+    border-top-left-radius: 0.25em;
+    border-top-right-radius: 0.25em;
+    cursor: default;
+    text-align: center;
+}
+.parte2{
+    display: block;
+    position: absolute; 
+    background-color: #f7f7f7;
+    text-align: center;
+}
+.img1{
+    width: 300px;
+    height: 300px;
+    float: right;
+}
