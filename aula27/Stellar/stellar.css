@@ -1,51 +1,97 @@
 body{
-    background-image: url(images/overlay.png), -webkit-linear-gradient(
-45deg
-, #e37682 15%, #5f4d93 85%);
-text-align: center;
+    background-image: url(images/overlay.png), linear-gradient(
+    45deg, #e37682 15%, #5f4d93 85%);
+    text-align: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    line-height: 1.5;
+    font-size: 100%;
 }
-header{
-    padding: 5em 5em 1em 5em;
+.header{
+    padding: 130px 93px 74px 93px;
 }
-.logo{
-    transition-delay: 0s;
-    display: block;
-    margin: 0 0 1.5em 0;
-}
-.titulo{
+.header h1{
     font-size: 60px;
-    color: white;
-    margin: 0px 0px 15px;
+    color: #ffffff;
 }
-.paragrafo1{
+.header p{
+    color: #ffffffA6;
     font-size: 23px;
-    color: #ffffffA6
-    ;
 }
-.paragrafo1__{
-    font-size: 23px;
+.header a{
     color: #ffffffA6
 }
-nav{
-    display: block;
+.main-nav{
+    padding: 18px;
     color: #636363;
-    width: 64em;
-    max-width: calc(100% - 4em);
-    padding: 1em;
+    
     background-color: #f7f7f7;
     border-top-left-radius: 0.25em;
     border-top-right-radius: 0.25em;
-    cursor: default;
     text-align: center;
+
 }
-.parte2{
-    display: block;
-    position: absolute; 
-    background-color: #f7f7f7;
-    text-align: center;
+.main-nav ul li{
+    display: inline-block;
+    font-size: 22px;
+    padding: 0 1.25em;
+    text-align:center;
 }
-.img1{
-    width: 300px;
-    height: 300px;
+.main-nav li a{
+    text-decoration: none;
+    color: inherit;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.intro-main{
+    background-color: white;
+    padding: 93px 93px 56px 93px;
+}
+.intro-main h2{
+    font-size: 37.33px;
+    text-align: left;
+}
+.intro-main h2{
+    font-size: 37px;
+    margin-bottom: 26px;
+}
+.intro-main p{
+    font-size: 18.6px;
+    margin-bottom: 37px;
+}
+.intro-main h2::after{
+    background-image: linear-gradient(
+90deg
+, #efa8b0, #a89cc8, #8cc9f0);
+display: block;
+content: '';
+width: 3.25em;
+height: 2px;
+margin: 0.7em 0 1em 0;
+border-radius: 2px;
+}
+.intro-main li{
+    display: inline-block;
+    float: left;  
+}
+.intro-main li a{
+    text-decoration: none;
+    color: inherit;
+    font-size: 18px;
+}
+.img{
     float: right;
+    width: 40%;
 }
+.conteudo{
+    width: 60%;
+    display: inline-block;
+}
+.img img{
+    border-radius: 100%;
+}
+
+  
