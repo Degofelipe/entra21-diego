@@ -231,5 +231,42 @@ transform: translateX(-50%);
     font-size: 18px;
     color: #636363;
 }
-
-  
+.section3{
+    background-color: white;
+    padding: 93px 93px 56px 93px;
+}
+.section3 h2{
+    font-size: 37px;
+    margin-bottom: 26px;
+}
+.section3 p{
+    font-size: 23px;
+    text-align: center;
+}
+.section3 h2::after{
+    background-image: linear-gradient(
+90deg
+, #efa8b0, #a89cc8, #8cc9f0);
+display: block;
+content: '';
+width: 3.25em;
+height: 2px;
+margin: 0.7em 0 1em 0;
+border-radius: 2px;
+position: relative;
+left: 50%;
+transform: translateX(-50%);
+}
+.section3-ul{
+    width: 100%;
+}
+.section3 li{
+    display: inline-block;
+    text-align: center;
+    padding: 0px 28px;
+}
+.section3 a{
+    text-decoration: none;
+    font-size: 18px;
+    color: #636363;
+}
