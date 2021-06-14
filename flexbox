@@ -1,0 +1,40 @@
+justify-content:
+    (horizontal)
+flex-start: Os itens são alinhados à esquerda do contêiner.
+flex-end: Os itens são alinhados ao lado direito do contêiner.
+center: Os itens são alinhados no centro do contêiner.
+space-between: Os itens são exibidos com espaçamento igual entre eles.
+space-around: Os itens são exibidos com espaçamento igual ao redor deles.
+
+align-items:
+    (vertical)
+flex-start: Os itens são alinhados ao topo do contêiner.
+flex-end: Os itens são alinhados ao fundo do contêiner.
+center: Os itens são alinhados no centro vertical do contêiner.
+baseline: Os itens são exibidos na linha de base do contêiner.
+stretch: Os itens são esticados para caber no contêiner.
+
+flex-direction:
+
+row: Os itens são colocados da mesma forma que a direção do texto.
+row-reverse: Os itens são colocados em oposição à direção do texto.
+column: Os itens são colocados de cima para baixo.
+column-reverse: Os itens são colocados de baixo para cima.
+
+flex-wrap:
+
+nowrap: Cada item se ajusta a uma única linha.
+wrap: Os itens são agrupados em linhas adicionais.
+wrap-reverse: Os itens são agrupados em linhas adicionais ao contrário.
+
+flex-flow:
+Esta propriedade abreviada aceita o valor das duas propriedades separadas por um espaço.
+
+align-content:
+
+flex-start: As linhas são embaladas na parte superior do contêiner.
+flex-end: As linhas são embaladas no fundo do contêiner.
+center: As linhas são embaladas no centro vertical do contêiner.
+space-between: As linhas são exibidas com espaçamento igual entre elas.
+space-around: As linhas são exibidas com espaçamento igual ao redor delas.
+stretch: As linhas são esticadas para caber no contêiner.
