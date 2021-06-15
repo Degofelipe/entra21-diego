@@ -115,6 +115,7 @@ body{
 }
 .section3 input:focus{
     border-color: #49bf9d;
+    outline: 0px;
 }
 .section3 textarea{
     display: inline-block;
@@ -125,6 +126,7 @@ body{
 }
 .section3 textarea:focus{
     border-color: #49bf9d;
+    outline: 0px;
 }
 .section3 ul li{
     display: block;
