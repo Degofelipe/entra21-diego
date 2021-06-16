@@ -1,0 +1,11 @@
+.header{
+    display: block;
+    text-align: center;
+}
+img{
+    width: 100%;
+}
+.header h1{
+    margin: 0%;
+    font-family: 'Lobster', cursive;
+}
