@@ -39,6 +39,7 @@ h1{
     font-size: 50px;
     text-align: center;
     padding: 30px;
+    font-family: 'Indie Flower', cursive;
 }
 h1::after{
     background-image: linear-gradient(

@@ -12,11 +12,11 @@ body{
     
 }
 .header h1{
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Indie Flower', cursive;
     text-align: center;
     font-size: 60px;
     color:black;
-    text-shadow: 2px 2px white;
+    text-shadow: 3px 3px white;
 }
 .menu ul{
     background-color: rgb(41, 39, 39);
