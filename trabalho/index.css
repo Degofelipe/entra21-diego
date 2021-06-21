@@ -1,7 +1,9 @@
 body{
-    background-image: url(static/imagens/estrada2rec.jpg);
+    background-image: url(static/imagens/estrada2.jpg);
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 }
 .header{
     padding-top: 30px;
@@ -12,9 +14,8 @@ body{
 .header h1{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
-    font-size: 50px;
+    font-size: 60px;
     color:black;
-    padding-top: 180px;
     text-shadow: 2px 2px white;
 }
 .menu ul{
@@ -64,6 +65,8 @@ footer a{
         background-image: url(static/imagens/estrada2.jpg);
         background-size: cover;
         background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
      
     }
     .header h1{
@@ -77,5 +80,7 @@ footer a{
         padding-bottom: 10px;
         justify-content: center;
     }
-    
-    
+    .menu ul li{
+        text-align: center;
+    }
+}

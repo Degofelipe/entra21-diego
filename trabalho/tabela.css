@@ -1,4 +1,5 @@
 body{
+    background-image: url(static/imagens/textura.jfif);
     width: 100%;
     height: 100%;
     background-color: #dbeef3;
@@ -23,13 +24,16 @@ body{
 table{
     justify-content: center;
     width: 70%;
-    margin: 30px;
 }
 table, th, td {
     font-size: 20px;
     border: 2px solid black;
     border-collapse: collapse;
     padding: 0 10px;
+}
+table td a{
+    text-decoration: none;
+    color: black;
 }
 h1{
     font-size: 50px;
@@ -39,7 +43,7 @@ h1{
 h1::after{
     background-image: linear-gradient(
         90deg
-        , #76c5c5, #257e3b, #111388);
+        , #e3f0f0, #559797,#053a3a,#559797, #e3f0f0 );
         display: block;
         content: '';
         width: 100%;
@@ -52,10 +56,12 @@ h1::after{
     box-sizing: border-box;
     display:block;
     text-align: center;
-    list-style: none;
-    text-decoration: none;
     font-size: 25px;
+}
+.button a{
+    text-decoration: none;
     color: black;
+    
 }
 footer ul{
     padding: 0;
@@ -81,6 +87,10 @@ footer a{
     .menu ul li{
         justify-content: center; 
     }
+    table{
+        margin-left: auto;
+        margin-right: auto;
+    }
     
 }
 @media screen and (min-width:736px){
@@ -89,6 +99,9 @@ footer a{
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
         padding-bottom: 10px;
         justify-content: center;
+    }
+    .menu ul li {
+        text-align: center;
     }
     table, th, td {
         font-size: 20px;
@@ -99,6 +112,5 @@ footer a{
     footer ul{
         display:grid;
         grid-template-columns: 5% 5% 5% 5% 80%;
-
     }
 }
