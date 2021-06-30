@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <script>
+
+        // 2) Crie uma função obtemDiaSemana(data) para mostrar o dia da semana
+        //        no formato: 
+        //         "Segunda-Feira", 
+        //         "Terça-Feira", 
+        //         "Quarta-Feira", 
+        //         "Quinta-Feira",
+        //         "Sexta-Feira",
+        //         "Sábado",
+        //         "Domingo"
+
+        let data = new Date()
+        console.log(data)
+
+        function diaSemana(data) {
+            let dia
+            switch (data.getDay()){
+                case 0 :
+                    dia = "domingo";
+                    break;
+                case 1 :
+                    dia = "Segunda-Feira";
+                    break;
+                case 2:
+                    dia = "Terça-Feira";
+                    break;
+                case 3:
+                    dia = "Quarta-feira";
+                    break;
+                case 4:
+                    dia = "Quinta-Feira";
+                    break;
+                case 5:
+                    dia = "Sexta-Feira";
+                    break;
+                case 6:
+                    dia = "Sábado";
+                    break;
+                    
+                return dia
+            }
+            console.log(dia)
+            alert(dia)
+            
+
+        }
+        diaSemana(data)
+       
+    </script>
+</body>
+
+</html>

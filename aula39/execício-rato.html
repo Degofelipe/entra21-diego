@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            position: absolute;
+            width: min-content;
+        }
+
+        pre {
+            margin: 0;
+        }
+
+        .focus {
+            border: 1px solid black;
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <pre>
+ _   _
+(q\_/p)
+ /. .\
+=\_t_/=   __
+ /   \   (
+((   ))   )
+/\) (/\  /
+\  Y  /-'
+ nn^nn
+        </pre>
+    </div>
+
+    <script>
+        let div = document.querySelector("div")
+        div.tabIndex = 0
+        div.addEventListener("focusin", (e) => {
+            div.classList.add("focus")
+        })
+        div.addEventListener("focusout", (e) => {
+            div.classList.remove("focus")
+        })
+
+        div.addEventListener("keydown", (e) => {
+            let coordenadas = div.getBoundingClientRect()
+
+            if (e.key == "ArrowUp") {
+                div.style.top = coordenadas.top - div.clientHeight + "px"
+            }
+            if(e.key == "ArrowDown"){
+                div.style.top = coordenadas.top + div.clientHeight + "px"
+            }
+            if(e.key == "ArrowLeft"){
+                div.style.left = coordenadas.left - div.clientWidth + "px"
+            }
+            if(e.key == "ArrowRight"){
+                div.style.left = coordenadas.left + div.clientWidth + "px"
+            }
+        })
+
+    </script>
+</body>
+
+</html>
