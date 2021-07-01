@@ -6,42 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body {
+         body {
             display: flex;
             height: 100vh;
             justify-content: center;
             align-items: center;
         }
-
         body p {
             display: flex;
             justify-content: center;
             background-color: rgba(127, 155, 197, 0.39);
             padding: 5px 10px;
             border-radius: 5px;
+            font-size: 50px;
         }
     </style>
 </head>
-
+<p id="demo"></p>
 <body>
-
-    <p id="demo"></p>
-
     <script>
+        // 1) Escreva a função imprimeNumeros(comeco, fim) que mostre um número a cada segundo, começando
+        // do comeco até o fim.
+        let começo = 5
+        let fim = 10
 
-        // 5) Crie uma função segundosParaAmanha() que retorna o número de segundos
-        //        até o próximo dia.
-
-        let data = new Date
-
-        function segundosA(data) {
-            let segundos = data.getHours() * 3600 + data.getMinutes() * 60 + data.getSeconds();
-            let falta = 86400 - segundos
-                console.log(`Falta ${falta} segundos para o próximo dia`)
-                document.getElementById("demo").innerHTML = `Falta ${falta} segundos para o próximo dia`
+        function imprimeNumeros(começo, fim) {
+            let intervalo = setInterval(() => {
+                if (começo == fim - 1) clearInterval(intervalo)
+                console.log(começo);
+                começo++
+                document.getElementById("demo").innerHTML = começo
+            }, 1000)
         }
 
-        segundosA(data)
+        imprimeNumeros(começo, fim)
+
 
     </script>
 </body>

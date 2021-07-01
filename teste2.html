@@ -5,11 +5,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
+    
 </head>
 
 <body>
+    <div>
+        <input type="time">
+        <button id="btn">Cronômetrar</button>
+    </div>
+    <div>
+        <div class="minutos"></div>
+        <div class="segundos"></div>
+    </div>
     <script>
+        // 3) Faça uma cronômetro através da função criaCronometro(tempo, callback) que receba o valor inicial através de um <input type="time"> 
+        // e dispare uma função callback quando o tempo acabar.
+        // */
+        document.querySelector("#btn").addEventListener("click", () => {
+            criaCronometro(document.querySelector(`input`).value, alert)
+        })
+
+       function criaCronometro(tempo, callback) {
+           let [minutos, segundos] = tempo.split(":")
+           let time = new Date(0, 0, 0, 0, minutos, segundos)
+
+           setTimeout(function loop() {
+               if (time.getMinutes() > 0 || time.getSeconds() > 0) {
+                   setTimeout(loop, 1000)
+                   time.setSeconds(segundos--)
+                   document.querySelector(".minutos").innerHTML = time.getMinutes + "&nbsp;:&nbsp"
+                   document.querySelector(".secundos").innerHTML = time.getSeconds
+               }else{
+                   callback
+               }
+           }, 1000)
+       }
 
     </script>
 </body>
