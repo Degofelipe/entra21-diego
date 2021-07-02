@@ -1,68 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        div {
-            position: absolute;
-            width: min-content;
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: linear-gradient(45deg, #4e80b9d2 15%, #1b0ceea1 85%);
+            flex-direction: column;
         }
- 
-        pre {
-            margin: 0;
+
+        .container {
+            width: 200px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            padding: 20px 10px;
+            border-radius: 10px;
+
         }
- 
-        .focus {
-            border: 1px solid black;
+
+        .container h1 {
+            text-align: center;
+            color: rgba(31, 31, 150, 0.774);
+        }
+
+        .container input {
+            padding: 10px;
+            margin-bottom: 3px;
+            border: none;
             outline: none;
+            border-radius: 6px;
+            background-color: rgba(138, 136, 136, 0.233);
+        }
+
+        .container button {
+            padding: 8px;
+            margin-top: 20px;
+            background-color: rgb(130, 130, 204);
+            color: white;
+            border-radius: 5px;
+            background-image: linear-gradient(45deg, #2c1fe9bd 15%, #6ca2dfd2 85%);
+        }
+        .container a {
+            text-align: center;
+            list-style: none;
+            text-decoration: none;
+            margin-top: 30px;
+            padding: 5px;
+            color: rgb(37, 36, 36);
+        }
+        .relogio{
+            display: flex;
+            flex-direction: row;
+            font-size: 20px;
+        }
+        .relogio p{
+            margin: 0%;
         }
     </style>
 </head>
+
 <body>
-    <div>
-        <pre>
- _   _
-(q\_/p)
- /. .\
-=\_t_/=   __
- /   \   (
-((   ))   )
-/\) (/\  /
-\  Y  /-'
- nn^nn</pre>
+    
+    <div class="container">
+        <h1>Login</h1>
+        <input type="text" name="" id="" placeholder="Usuário">
+        <input type="password" name="" id="" placeholder="Senha">
+        <button><strong>Login</strong></button>
+        <a href="#">Esqueci a senha</a>
+    </div>
+    <div class="relogio">
+        <p class="hora"></p>
+        <p class="min"></p>
+        <p class="sec"></p>
     </div>
     <script>
-        let div = document.querySelector("div")
-        div.tabIndex = 0
-        div.addEventListener("focusin", (e) => {
-            div.classList.add("focus")
-        })
-        div.addEventListener("focusout", (e) => {
-            div.classList.remove("focus")
-        })
-        div.addEventListener("keydown", (e) => {
-            let coordenadas = div.getBoundingClientRect()
-            
-            if (e.key == "ArrowUp") {
-                if (coordenadas.top  >= 15)
-                div.style.top = coordenadas.top - div.clientHeight + "px"
+        function relogio() {
+            let horaAtual= new Date()
+            let hora = horaAtual.getHours()
+            let min = horaAtual.getMinutes()
+            let sec = horaAtual.getSeconds()
+            document.querySelector(".hora").innerHTML = hora + ":"
+            document.querySelector(".min").innerHTML = min +":"
+            document.querySelector(".sec").innerHTML = sec
+            if (hora < 10) {
+                document.querySelector(".hora").prepend("0")
             }
-            if (e.key == "ArrowDown") {
-                if (coordenadas.top < screen.height - div.clientHeight * 3)
-                div.style.top = coordenadas.top + div.clientHeight + "px"
+            if (min < 10) {
+                document.querySelector(".min").prepend("0")
             }
-            if (e.key == "ArrowLeft") {
-                if (coordenadas.left >= 30)
-                div.style.left = coordenadas.left - div.clientWidth + "px"
+            if (sec < 10) {
+                document.querySelector(".sec").prepend("0")
             }
-            if (e.key == "ArrowRight") {
-                if (coordenadas.left < screen.width - (div.clientWidth * 2))
-                div.style.left = coordenadas.left + div.clientWidth + "px"
-            }
-        })
+        }
+
+        let intervalo = setInterval(() =>{
+            relogio()
+        }, 1000)
     </script>
-    
+                           
 </body>
+
 </html>
