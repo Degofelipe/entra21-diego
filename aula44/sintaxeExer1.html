@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <script>
+        class Aluno{
+            constructor(matricula, nome, nota1, nota2, notaTrabalho) {
+                this.matricula = matricula
+                this.nome = nome
+                this.nota1 = nota1 
+                this.nota2 = nota2 
+                this.notaTrabalho = notaTrabalho 
+            }
+            media(){
+                let media = (this.nota1 * 3 / 10) + (this.nota2 * 3 / 10) + (this.notaTrabalho * 2 / 10)
+                console.log(media)
+                return media
+            }
+            final(){
+                let media = this.media()
+                if(media >= 6){
+                    console.log("Aprovado");
+                }
+                else if (media < 6){
+                    let notaFinal = 6 - media
+                    console.log(`O aluno precisa tirar ${notaFinal.toFixed(2)} na prova final`)
+                }
+            }
+        }
+
+        let aluno1 = new Aluno("001", "Diego", 2, 5, 8)
+
+        
+        aluno1.media()
+        aluno1.final()
+
+
+
+
+
+
+
+    //     1) Escreva a classe Aluno. Cada objeto dessa classe deve guardar os seguintes dados:
+    //     - matrícula,
+    //     - nome
+    //     - 2 notas de prova
+    //     - 1 nota de trabalho
+
+    //     Essa classe deve ter 2 métodos:
+    //     - media: calcula a média final do aluno (cada prova tem peso 3 e o trabalho tem peso 2)
+    //     - final: calcula quanto o aluno precisa para a prova final (retorna zero se ele não for para a final):
+    </script>
+
+</body>
+
+</html>
