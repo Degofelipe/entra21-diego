@@ -10,70 +10,46 @@
 
 <body>
     <script>
-       class Pessoa {
-            constructor(nome, telefone) {
-                this.nome = nome
-                this.telefone = telefone
+//    2) Crie uma subclasse de Relogio que adiciona o parametro de precisao 
+//         (O numero em ms entre os ticks). 
+        class Relogio {
+            constructor(formato) {
+                this.formato = formato
             }
-        }
- 
-        class Agenda {
-            constructor() {
-                this.listaPessoas = []
+
+            renderizar() {
+                let data = new Date()
+
+                let horas = data.getHours()
+                if (horas < 10) horas = "0" + horas
+
+                let minutos = data.getMinutes()
+                if (minutos < 10) minutos = "0" + minutos
+
+                let segundos = data.getSeconds()
+                if (segundos < 10) segundos = "0" + segundos
+
+                let resultado = this.formato
+                    .replace("h", horas)
+                    .replace("m", minutos)
+                    .replace("s", segundos)
+                
+                console.log(resultado)
             }
- 
-            armazenaPessoa(nome, telefone) {
-                // Checar se a lista tem espaço disponível
-                if (this.listaPessoas.length < 10) {
-                    this.listaPessoas.push(new Pessoa(nome, telefone))
-                } else {
-                    console.log("Agenda está lotada!")
-                }
+
+            parar() {
+                clearInterval(this.timer)
             }
- 
-            imprimeAgenda() {
-                for (let pessoa of this.listaPessoas) {
-                    console.log(`Nome: ${pessoa.nome} | Telefone: ${pessoa.telefone}`)
-                }
-            }
- 
-            removePessoa(nome) {
-                for (let i = 0, tamanhoVetor = this.listaPessoas.length; i < tamanhoVetor; i++) {
-                    if (this.listaPessoas[i].nome === nome) {
-                        this.listaPessoas.splice(i, 1)
-                        break
-                    }
-                }
-            }
- 
-            imprimePessoa(indice) {
-                // Verificar se o indice é válido
-                if (indice < 0 && indice > 9) {
-                    console.log("Indice Inválido!")
-                } else {
-                    console.log(`Nome: ${this.listaPessoas[indice].nome} | Telefone: ${this.listaPessoas[indice].telefone}`)
-                }
-            }
- 
-            buscaPessoa(nome) {
-                for (let pessoa of this.listaPessoas) {
-                    if (pessoa.nome === nome) {
-                        console.log(`Telefone: ${pessoa.telefone}`)
-                        return
-                    }
-                }
-                console.log("Nome não cadastrado!")
+
+            comecar() {
+                this.renderizar()
+                this.timer = setInterval(() => this.renderizar(), 1000)
             }
         }
 
+        let timer1 = new Relogio("h:m:s")
+        timer1.comecar()
 
-// 2) Crie uma classe Agenda que pode armazenar 10 pessoas e que seja capaz de realizar as 
-//         seguintes operações:
-//         - armazenaPessoa(nome, telefone)
-//         - removePessoa(nome)
-//         - buscaPessoa(nome) -> Informa o número de telefone da pessoa
-//         - imprimeAgenda() -> Imprime os dados de todas as pessoas da agenda
-//         - imprimePessoa(indice) -> Imprime os dados da pessoa que está na posição "i" da agenda
     </script>
 </body>
 

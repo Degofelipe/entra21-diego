@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <script>
+      /*
+        Exercício
+
+        Seguindo os princípios de encapsulamento crie a classe Funcionario:        
+        - Atributos: matricula, nome e salario.
+        
+        Regras para validações dos atributos:
+        - matrícula: Deve ser um número inteiro positivo.
+        - nome: deve conter de 4 a 50 caracteres.
+        - salario: deve ser um valor não inferior a R$ 465,00.
+
+        Testes:
+        let funcionario = new Funcionario("12.5", "Pedro", 700) // Uncaught Matrícula inválida
+        
+        let funcionario = new Funcionario(12, "Pedro", 700)
+        funcionario.salario = 400 // Uncaught Salário inválido
+
+        let funcionario = new Funcionario(12, "Pedro", 700)
+        funcionario.nome = "A" // Uncaught Nome inválido
+        */
+
+        class Funcionario {
+            #matricula
+            #nome
+            #salario
+
+            constructor(matricula, nome, salario){
+                this.#validaMatricula(matricula) // para chamar as funções
+                this.#validaNome(nome)
+                this.#validaSalario(salario)
+
+                this.#matricula = matricula
+                this.#nome = nome
+                this.#salario = salario
+            }
+
+            #validaMatricula(matricula) {
+                if (!(Number.isInteger(matricula) && matricula > 0)) { //Number.isInteger = verificar se o número é inteiro
+                    throw "Matrícula inválida"
+                }
+            }
+
+            #validaNome(nome) {
+                if (!(nome.length > 4 && nome.length <50)){ 
+                    throw "O nome deve conter de 4 a 50 caracteres."
+                }
+            }
+
+            #validaSalario(salario) {
+                if(salario < 465) {
+                    throw "Salário inferior a R$ 465,00."
+                }
+            }
+        }
+        let funcionario = new Funcionario(12, "Diego", 300)
+    
+    </script>
+</body>
+
+</html>
