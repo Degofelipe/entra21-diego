@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="statics/css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="titulo">
+            <h3>Serra Angel</h3>
+            <p>3</p>
+            <img src="statics/img/manacost.png" alt="fotinha">
+            <img src="statics/img/manacost.png" alt="fotinha">
+        </div>
+        <div class="foto">
+            <img src="statics/img/serraangel.png" alt="">
+        </div>
+        <div class="criatura">
+            <h3>Creature - Angel </h3>
+            <img src="statics/img/serraangelexpansionsymbol.png" alt="">
+        </div>
+        <div class="texto">
+            <h2>Flying, vigilance</h2>
+            <p>
+                The angel remember her past lives like dreams. Her song held up
+                meadows. Her blade drove back darkness. Her wings carried her across the ages.
+            </p>
+        </div>
+        <div class="quatro">
+            <p>4/4</p>
+        </div>
+
+    </div>
+    
+    <script>
+        const jsonCards = "[{\"name\":\"Serra Angel\",\"image\":\"static/img/serraangel.png\",\"manaCost\":3,\"typeLine\":\"Creature - Angel\",\"expansionSymbol\":\"static/img/serraangelexpansionsymbol.png\",\"hability\":\"Flying, vigilance\",\"text\":\"The angel remembers her past lives like dreams. Her song held up meadows. Her blade darkness. Her wings carried her across the ages.\",\"power\":\"4/4\",\"collectorNumber\":\"033/269 U\"},{\"name\":\"Brainstorm\",\"image\":\"\",\"manaCost\":4,\"typeLine\":\"Instant\",\"expansionSymbol\":\"static/img/kokushoexpansionsymbol.png\",\"hability\":\"Flying<br>When Kokusho, the Evening Star dies, each opponent loses 5 life. You gain life equal to the life lost this way.\",\"text\":\"The fall of the evening star never heralds a gentle dawn.\",\"power\":\"5/5\",\"collectorNumber\":\"095/249 R\"}]"
+        let carta = JSON.parse(jsonCards)
+        
+    </script>
+
+</body>
+
+</html>

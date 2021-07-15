@@ -1,0 +1,104 @@
+.main {
+    width: 300px;
+    background-color: rgb(255, 240, 152);
+    border: solid 1px black;
+    border-radius: 5px;
+}
+
+.titulo {
+    display: grid;
+    align-items: center;
+    height: 30px;
+    margin: 10px;
+    grid-template-columns: 76% 8% 8% 8%;
+    background-color: white;
+    border: solid black 8px;
+    border-style: double;
+    border-radius: 15px;
+}
+
+.titulo h3, .titulo img, .titulo p{
+    margin-top: 4px;
+    align-items: center;
+}
+
+.titulo img {
+    margin-top: -13px;
+}
+
+h3 {
+    padding-left: 10px;
+}
+
+
+.foto {
+    display: flex;
+    justify-content: center;
+    margin-top: -12px;
+}
+
+.foto img {
+    border: solid black 8px;
+    border-style: double;
+}
+
+.criatura {
+    display: grid;
+    
+    height: 30px;
+    margin: 10px;
+    grid-template-columns: 87% 13%;
+    background-color: white;
+    border: solid black 8px;
+    border-style: double;
+    border-radius: 15px;
+    margin-top: -2px;
+}
+
+.criatura h3 {
+    margin-top: 3px;
+}
+
+.criatura img{
+    margin-bottom: 60px;
+    width: 30px;
+}
+
+.texto {
+    margin-top: -12px;
+    margin-left: 18px;
+    width: 250px;
+    border: solid black 8px;
+    border-style: double;
+    background-color: white;
+    margin-bottom: 12px;
+}
+
+.texto h2 {
+    font-size: 1.2rem;
+    padding-left: 10px;
+}
+
+.texto p {
+    font-style: italic;
+    padding-left: 10px;
+}
+
+.quatro {
+    background-color: white;
+    border: solid 2px;
+    width: 34px;
+    height: 20px;
+    text-align: center;
+    margin-left: 250px;
+    margin-top: -25px;
+    border-radius: 6px;
+}
+
+.quatro p {
+    margin-top: 1px;
+}
+
+
+
+
