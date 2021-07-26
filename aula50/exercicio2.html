@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <script>
+        let numero = +prompt("Digite um número")
+
+        function dobrarEm5Segundos(numero, callback) {
+            console.log("Calculando, aguarde...")
+            setTimeout(() => {
+                resultado = numero * 2
+                callback(null, resultado) 
+            }, 5000)
+        }
+
+        function callback(error, resultado) {
+            if (error) {
+                console.log(error.message)
+            } else {
+                console.log(`A operação foi bem sucedida! O resultado é ${resultado}`);
+            }
+        }
+        
+        if (isNaN(numero)) { 
+            callback(new Error("Operação falhou!"))  
+        }
+        
+        dobrarEm5Segundos(numero, callback)
+
+
+        // 2) Crie uma função dobrarEm5Segundos(numero, cb) que dobre o valor de um número após 5 segundos. Se o valor recebido não for um número
+        // ele irá chamar a cb passando um erro. 
+        // callback(error, result) => Se um erro for passado irá mostrar a mensagem: "A operação falhou! [mensagem do erro]".
+        // Senão, irá mostrar a mensagem: "A operação foi bem sucedida! O resultado é [result]".
+    </script>
+</body>
+
+</html>
