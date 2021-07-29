@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <style>
+        .rick {
+            display: inline-grid;
+            grid-template-columns: auto auto auto;
+        }
+
+        .rick img {
+            width: 300px;
+            height: 200px;
+            margin: 8px;
+            border: solid 2px black;
+            border-radius: 5px;
+        }
+    </style>
+    <div class="container">
+        <div class="rick">
+        </div>
+    </div>
+
+    <body>
+        <script>
+            const rickDiv = document.querySelector(".rick")
+            async function getRick() {
+                let response = await fetch("https://rickandmortyapi.com/api/character", {
+                    headers: {
+                        "x-api-key": "ea2c9cfc-5fe7-46fa-adf1-9c741d90259a"
+                    }
+                });
+
+                let body = await response.json();
+            }
+
+            async function getCharactersNumber() {
+                const response = await fetch("https://rickandmortyapi.com/api/character");
+
+                if (response.ok) {
+                    const body = await response.json()
+
+                    return body.info.count;
+                } else {
+                    console.log("Falha na requisição")
+                }
+            }
+
+            function generateRandomNumbers(max) {
+                const numbers = []
+
+                for (let i = 0; i < 9; i++) {
+                    numbers[i] = Math.floor(Math.random() * max - 0) + 1
+                }
+
+                return numbers.toString()
+            }
+
+            async function getRandomCharacters() {
+                const charactersNumber = await getCharactersNumber()
+                const randomIds = generateRandomNumbers(charactersNumber)
+
+                const response = await fetch(`https://rickandmortyapi.com/api/character/${randomIds}`)
+                if (response.ok) {
+                    const body = await response.json()
+
+                    for (let card of body) {
+                        createRickImage(card.image)
+                    }
+
+                    console.log(body)
+                } else {
+                    console.log("Falha ao carregar os personagens")
+                }
+            }
+
+            getRandomCharacters();
+
+            function createRickImage(url) {
+                const img = document.createElement("img")
+                img.src = url
+                rickDiv.append(img)
+            }
+
+
+            getRick();
+        </script>
+    </body>
+
+</html>

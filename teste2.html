@@ -9,44 +9,7 @@
 </head>
 
 <body>
-    <script>
-        function criaPromise() {
-            return new Promise(resolve => setTimeout(resolve, 1000));
-        }
-
-        async function umPorSegundo() {
-            await criaPromise()
-            console.log("1s")
-            await criaPromise()
-            console.log("2s")
-            await criaPromise()
-            console.log("3s")
-        }
-        
-        umPorSegundo();
-        
-        
-        /*
-        Exercício
-
-        1) Transforme o seguinte trecho de código utilizando async/await:
-        
-        const delay = () => new Promise(resolve => setTimeout(resolve, 1000));
-
-        function umPorSegundo() {
-            delay().then(() => {
-                console.log('1s');
-                delay().then(() => {
-                    console.log('2s');
-                    delay().then(() => {
-                        console.log('3s');
-                    });
-                });
-            });
-        }
-        umPorSegundo();
-        */
-    </script>
+   
 </body>
 
 </html>

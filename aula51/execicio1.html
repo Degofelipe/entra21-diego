@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+
+    <style>
+        .gatos {
+            display: inline-grid;
+            grid-template-columns: auto auto auto auto auto;
+        }
+
+
+
+        .gatos img {
+            width: 300px;
+            height: 200px;
+            margin: 8px;
+            border-radius: 5px;
+        }
+    </style>
+
+    <body>
+        <form>
+            <label for="raça">Selecione a raça: </label>
+            <select name="raca" id="raca">
+            </select>
+            <br><br>
+        </form>
+        <div class="gatos">
+        </div>
+
+
+
+        <script>
+
+            // 1) Implemente um script que consuma a api: https://thecatapi.com/.
+            // * Crie uma página que carregue 10 imagens de um gato com base na sua raça.
+            // * Crie uma página que carregue 10 gifs de gatos.
+            async function getCat() {
+                let response = await fetch("https://api.thecatapi.com/v1/breeds", {
+                    headers: {
+                        "x-api-key": "ea2c9cfc-5fe7-46fa-adf1-9c741d90259a"
+                    }
+                });
+
+
+
+                let body = await response.json();
+
+
+
+                console.log(body)
+
+
+
+                for (let raca of body) {
+                    insereRaca(raca.id, raca.name);
+                }
+
+
+
+                obtemGatos();
+            }
+
+
+
+            function insereRaca(idRaca, nomeRaca) {
+                let novaOption = new Option(nomeRaca, idRaca);
+                raca.append(novaOption);
+            }
+
+
+
+            async function obtemGatos() {
+                const idRaca = raca.value;
+
+
+
+                const response = await fetch(`https://api.thecatapi.com/v1/images/search?breed_id=${idRaca}&limit=10`);
+                const body = await response.json();
+
+
+
+                for (let cat of body) {
+                    createCatImage(cat.url);
+                }
+            }
+
+
+
+            raca.addEventListener("change", obtemGatos);
+
+
+
+            function createCatImage(url) {
+                const img = document.createElement("img");
+
+
+
+                img.src = url;
+                document.querySelector(".gatos").append(img)
+            }
+
+
+
+            getCat();        
+        </script>
+    </body>
+
+</html>
