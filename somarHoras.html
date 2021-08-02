@@ -7,13 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<div id="horas"></div>
 
 <body>
     <script>
         {
             let horas = {}
 
-            let opcoes = "1) Cadastrar horas \n2) Ver horas \n3)Ver total de horas \n0) Sair"
+            let opcoes = "1) Cadastrar horas \n2) Ver horas \n3)Ver total de horas \n0) Sair "
 
             lacoPrincipal:
             while (true) {
@@ -33,30 +34,24 @@
             }
 
 
-            function somarHoras() { 
-                
+            function somarHoras() {
+
                 for (let i = 1; i < 32; i++) {
                     horas[i] = prompt(`Digite a quantidade de horas do dia ${i}`)
-                } 
+                }
             }
             function soma(horas) {
-            let soma = 0       
+                let soma = 0
                 for (let chave in horas) {
-                        if (isFinite(horas[chave])) {
-                            soma += +horas[chave]
-                        }
+                    if (isFinite(horas[chave])) {
+                        soma += +horas[chave]
                     }
-                   
-            alert(soma)
-            console.log(soma)
+                }
+
+                alert(soma)
+                console.log(soma)
             }
-        }  
-
-        
-
-           
-               
-        
+        }
 
     </script>
 </body>
