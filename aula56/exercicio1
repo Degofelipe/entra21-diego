@@ -1,0 +1,46 @@
+-- CREATE TABLE IF NOT EXISTS proprietario (
+-- 	id SERIAL PRIMARY KEY,
+-- 	endereco text NOT NULL,
+-- 	cpf numeric NOT NULL,
+-- 	nome text NOT NULL,
+-- 	telefone text NOT NULL
+-- );
+
+-- CREATE TABLE IF NOT EXISTS imovel (
+-- 	id SERIAL PRIMARY KEY,
+-- 	num_quartos numeric NOT NULL,
+-- 	num_banheiro numeric NOT NULL,
+-- 	area numeric NOT NULL,
+-- 	piscina boolean NOT NULL,
+-- 	churrasqueira boolean NOT NULL,
+-- 	fk_proprietario integer NOT NULL REFERENCES proprietario
+-- );
+
+-- CREATE TABLE IF NOT EXISTS locatario (
+-- 	id SERIAL PRIMARY KEY,
+-- 	endereco text NOT NULL,
+-- 	cpf numeric NOT NULL,
+-- 	nome text NOT NULL,
+-- 	telefone text NOT NULL
+-- );
+
+-- CREATE TABLE IF NOT EXISTS contrato (
+-- 	id SERIAL PRIMARY KEY,
+-- 	data_inicio date NOT NULL,
+-- 	data_termino date NOT NULL,
+-- 	valor numeric NOT NULL,
+-- 	dia_vencimento date NOT NULL,
+-- 	observacoes text,
+-- 	fk_imovel integer NOT NULL REFERENCES imovel,
+-- 	fk_proprietario integer NOT NULL REFERENCES proprietario,
+-- 	fk_locatario integer NOT NULL REFERENCES locatario
+-- );
+
+INSERT INTO proprietario (endereco, cpf, nome, telefone) VALUES
+	('Rodeio', 13424242454, 'João', '(47)99999-9999'),
+	('Timbó', 13724242454, 'Pedro', '(47)99989-9999');
+
+INSERT INTO imovel VALUES 
+	(1, 3, 1, 85, false, false, 7),
+	(2, 2, 1, 90, true, true, 8);
+	

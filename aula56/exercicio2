@@ -1,0 +1,33 @@
+CREATE TABLE IF NOT EXISTS cliente (
+	id SERIAL PRIMARY KEY,
+	endereco text NOT NULL,
+	telefone text NOT NULL,
+	cpf_cnpj numeric NOT NULL,
+	tipo_pessoa text NOT NULL,
+	pontos text
+);
+
+CREATE TABLE IF NOT EXISTS editora (
+	codigo SERIAL PRIMARY KEY,
+	telefone text NOT NULL,
+	endereco text NOT NULL,
+	nome_gerente text
+);
+
+CREATE TABLE IF NOT EXISTS livro (
+	isbn SERIAL PRIMARY KEY,
+	nome_autor text NOT NULL,
+	assunto text NOT NULL,
+	quantidade numeric NOT NULL,
+	fk_editora integer NOT NULL REFERENCES editora
+);
+
+CREATE TABLE IF NOT EXISTS venda (
+	id_cliente integer,
+	id_livro integer,
+	data_venda timestamp,
+	valor numeric NOT NULL,
+	PRIMARY KEY (id_cliente, id_livro, data_venda),
+	FOREIGN KEY (id_cliente) REFERENCES cliente,
+	FOREIGN KEY (id_livro) REFERENCES livro
+);

@@ -1,0 +1,11 @@
+--INSERT INTO produtos VALUES (1, 'caneta', 2.5);
+--INSERT INTO produtos (nome, preco) VALUES 
+	--('borracha', 0.5),
+	--('grafite', 0.5),
+	--('regua', 1);
+	
+--UPDATE produtos SET preco = 10 WHERE preco <20 = 1;
+--DELETE FROM produtos;
+
+DELETE FROM pedidos_produtos;
+DELETE FROM produtos WHERE id = 1;
