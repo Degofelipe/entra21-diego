@@ -1,7 +1,6 @@
 {
-  "name": "aula60",
+  "name": "aula61",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,6 +8,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "description": "",
   "dependencies": {
     "dotenv": "^10.0.0",
     "pg": "^8.7.1",
