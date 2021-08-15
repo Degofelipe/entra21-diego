@@ -9,15 +9,18 @@ const format = require("pg-format");
 // e insere essas editoras no banco de dados.
 // Utilize essa função para criar 5 editoras.
 
+
+
+
 async function insereEditoras(editoras) {
     const editorasVetor = []
     for (let editora of editoras) {
         editorasVetor.push([editora.nome_gerente, editora.telefone]);
     }
-    console.log(editorasVetor);
     try {
         const query = format("INSERT INTO editoras (nome_gerente, telefone) VALUES %L RETURNING id", editorasVetor);
         const { rows } = await db.query(query);
+        console.log("Editoras inseridas com sucesso");
     } catch (error) {
         console.log(error.message);
     } finally {
