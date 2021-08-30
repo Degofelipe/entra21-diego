@@ -1,0 +1,12 @@
+.App {
+  text-align: center;
+  }
+  h1{ 
+    font-size: 40px;
+  }
+  .cards {
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: row wrap;
+  gap: 20px;
+  }
