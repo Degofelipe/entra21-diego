@@ -7,6 +7,11 @@ import { MembroFamilia } from './components/MembroFamilia';
 import { Card } from './components/Card'
 import { ParOuImpar } from './components/ParOuImpar';
 import { Notificacao } from './components/Notificacao';
+import { ManipulandoEventos } from './components/ManipulandoEventos';
+import { Relogio } from './components/Relogio';
+import { ValorAleatorio } from './components/ValorAleatorio';
+import { ComponentesControlados } from './components/ComponentesControlados';
+import { Contador } from './components/Contador';
 
 function App() {
   return (
@@ -35,6 +40,20 @@ function App() {
           <ParOuImpar numero={5} />
           <hr/>
           <Notificacao mensagens={["oi"]}/>
+        </Card>
+        <Card titulo="Manipulando eventos" cor="#F5599">
+          <ManipulandoEventos />
+        </Card>
+        <Card titulo="state" cor="#F555">
+          <Relogio />
+          <hr />
+          <ValorAleatorio max={100} />
+        </Card>
+        <Card titulo="Componentes controlados" cor="#424202">
+          <ComponentesControlados />
+        </Card>
+        <Card titulo="State Assíncrono" cor="#427777">
+          <Contador inicial={11}/>
         </Card>
       </div>
     </div>
