@@ -1,4 +1,4 @@
-import './App.css';
+import "./App.css";
 
 import { AuthProvider } from "./contexts/authContext";
 import { Routes } from "./routes";

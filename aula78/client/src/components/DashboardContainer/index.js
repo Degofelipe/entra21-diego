@@ -1,7 +1,7 @@
 import { useHistory } from "react-router-dom";
 import { useAuth } from "../../hooks/useAuth";
 
-export function Dashboard() {
+export function DashboardContainer({title, children}) {
     const { signOut } = useAuth();
     const history = useHistory();
 
@@ -9,11 +9,12 @@ export function Dashboard() {
         signOut();
         history.push("/");
     }
-  
+
     return (
       <>
-        <h1>Dashboard</h1>
+        <h1>{title}</h1>
         <button onClick={handleClick}>SignOut</button>
+        {children}
       </>
     )
-  }
+}
