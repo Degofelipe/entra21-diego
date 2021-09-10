@@ -4,7 +4,7 @@ import { Prova } from "../Prova";
 import "./styles.css";
 
 export function StudentDashboard() {
-    const [provas, setProvas] = useState([
+    const [provas] = useState([
         {
             nome: "Prova 01",
             nota: 8

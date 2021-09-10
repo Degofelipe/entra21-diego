@@ -1,5 +1,6 @@
 import { useHistory } from "react-router-dom";
 import { useAuth } from "../../hooks/useAuth";
+import "../Prova/styles.css"
 
 export function DashboardContainer({title, children}) {
     const { signOut } = useAuth();
@@ -12,8 +13,8 @@ export function DashboardContainer({title, children}) {
 
     return (
       <>
-        <h1>{title}</h1>
-        <button onClick={handleClick}>SignOut</button>
+        <h1 className="titulo">{title}</h1>
+        <button class="signOut" onClick={handleClick}>SignOut</button>
         {children}
       </>
     )

@@ -1,0 +1,33 @@
+.prova {
+    display: flex;
+    background-color: rgba(233, 209, 255, 0.336);
+    margin-bottom: 10px;
+    
+}
+
+.nome-prova {
+    font-size: 22px;
+    margin-left: 10px;
+}
+
+.nota {
+    font-size: 22px;
+    margin-left: 85px;
+}
+
+.signOut{
+    position: fixed;
+    box-shadow:  rgba(150, 150, 150, 0.336) 2px 2px;
+    top: 70%;
+    right: 36%;
+}
+.signOut:hover{
+    background-color: rgba(83, 43, 226, 0.089);
+}
+
+
+.titulo{
+    position: fixed;
+    bottom: 70%;
+    right: 15%;
+}
