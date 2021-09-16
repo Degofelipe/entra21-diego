@@ -14,7 +14,7 @@ export function Routes() {
             <Router>                 
                 <Switch>  
                     <Route exact path="/" component={Home} />                                                                                                                                                 
-                    <PrivateRoute path="/dashboard" permissions={["admin", "teacher", "student"]}>
+                    <PrivateRoute path="/dashboard" permissions={["admin", "teacher", "user"]}>
                         <Dashboard />
                     </PrivateRoute>
                     <Route path="*" component={NotFound} />                                            
