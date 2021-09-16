@@ -10,8 +10,8 @@ app.use(cors());
 app.use(express.json());
 
 // Rotas da API
-app.use("/auth", require("./routes/authRoutes"));
-app.use("/users", require("./routes/usersRoutes"));
+app.use("/api/auth", require("./routes/authRoutes"));
+app.use("/api/users", require("./routes/usersRoutes"));
 
 // Middleware de tratamento de erros
 app.use(require("./middlewares/errorMiddleware"));

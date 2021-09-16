@@ -3,18 +3,22 @@ import {
     Route, 
     Switch    
 } from "react-router-dom";
+import { UserDashboard } from "../components/usuarios";
+import { UsuarioCadastrar } from "../pages/cadastrar";
 import { Dashboard } from "../pages/Dashboard";
 import { Home } from "../pages/Home";
 import { NotFound } from "../pages/NotFound";
 import { PrivateRoute } from "./privateRoutes";
+
 
 export function Routes() {
     return (
         <>            
             <Router>                 
                 <Switch>  
-                    <Route exact path="/" component={Home} />                                                                                                                                                 
-                    <PrivateRoute path="/dashboard" permissions={["admin", "teacher", "user"]}>
+                    <Route exact path="/" component={Home} />  
+                    <Route path="/cadastrar" component={UsuarioCadastrar} />                                                                                                                                    
+                    <PrivateRoute path="/dashboard" permissions={["admin", "moderador", "user"]}>
                         <Dashboard />
                     </PrivateRoute>
                     <Route path="*" component={NotFound} />                                            

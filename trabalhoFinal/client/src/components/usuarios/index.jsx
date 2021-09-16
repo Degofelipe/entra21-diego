@@ -3,12 +3,12 @@ import { DashboardContainer } from "../DashboardContaimer";
 
 
 
-export function AdminsDashboard() {
+export function UserDashboard() {
     
     return (
         <DashboardContainer title="testes">
-            <div className="admin-container"> 
-                <h1>Adimn</h1>
+            <div className="user-container"> 
+                <h1>user</h1>
             
             </div>                               
                

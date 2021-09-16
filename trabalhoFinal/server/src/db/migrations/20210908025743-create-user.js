@@ -30,7 +30,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       role: {
-        type: Sequelize.ENUM("admin", "student", "teacher"),
+        type: Sequelize.ENUM("admin", "user", "teacher"),
         allowNull: false
       },
       created_at: {
