@@ -32,13 +32,13 @@ export  function UsuarioCadastrar() {
                     <container>
                         <h2>Cadastro de usuário</h2>
                         <label htmlFor="text">Nome:</label>
-                        <input  type="text" value={name} onChange={e => setName(e.target.value)} placeholder="Nome completo" />
+                        <input  type="text" value={name} onChange={e => setName(e.target.value)} placeholder="Nome completo" required/>
                         <label htmlFor="text">Email:</label>
-                        <input  type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="Digite o email" />
+                        <input  type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="Digite o email" required/>
                         <label htmlFor="text">Telefone:</label>
-                        <input  type="tel" value={phone} onChange={e => setPhone(e.target.value)} placeholder="Telefone" />
+                        <input  type="tel" value={phone} onChange={e => setPhone(e.target.value)} placeholder="Telefone" required/>
                         <label htmlFor="text">Senha:</label>
-                        <input  type="text" value={password} onChange={e => setPassword(e.target.value)} placeholder="Digite a senha" />
+                        <input  type="text" value={password} onChange={e => setPassword(e.target.value)} placeholder="Digite a senha" required/>
                         <div>
                             <button 
                             onClick={handleSubmit}>

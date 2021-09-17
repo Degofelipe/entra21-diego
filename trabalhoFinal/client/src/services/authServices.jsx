@@ -38,7 +38,7 @@ async function getUser(accessToken) {
 
 async function signIn(email, password) {
     try {
-        const res = await api.post("/auth/login", { email, password });
+        const res = await api.post("/api/auth/login", { email, password });
         
         saveTokens(res.data.accessToken, res.data.refreshToken);        
         

@@ -5,6 +5,6 @@ const authentication = require("../middlewares/authMiddleware");
 
 router.post("/", createUser);
 
-router.get("/", authentication(["student", "teacher", "admin"], usersControllers.getUser));
+router.get("/", authentication(["user", "moderador", "dev"], usersControllers.getUser));
 
 module.exports = router;
